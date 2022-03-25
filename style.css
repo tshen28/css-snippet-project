@@ -1,0 +1,117 @@
+:root {
+    --bright: rgb(223, 73, 223); 
+    --lighter: #f5f5f5;
+    --bg-color: rgb(36, 38, 41);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    color: var(--lighter);
+}
+
+header h1 {
+    color: var(--bright);
+    margin-bottom: 20px;
+}
+
+header p {
+    width: 50%;
+    margin: auto;
+    font-size: small;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+.concepts {
+    flex: 1;
+    background-color: var(--bg-color);
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: var(--bright);
+}
+
+.box {
+    border-style: dotted;
+    border-width: 1px;
+    border-color: var(--lighter);
+    padding: 20px;
+    margin: 20px 0;
+    width: 30%;
+    flex-direction: column;
+}
+
+.box h3 {
+    border-style: solid;
+    border-color: var(--lighter);
+    border-radius: 5px;
+    color: var(--bright);
+    font-weight: bold;
+    position: relative;
+    margin: -30px auto;
+    top: -20px;
+    width: 95%;
+    background-color: var(--bg-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.box p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.box pre {
+    background-image: linear-gradient(to bottom, var(--bright), deeppink);
+    border-style: solid;
+    border-radius: 5px;
+    border-color: var(--bright);
+    color: var(--lighter);
+    padding: 2%;
+}
+
+.box:hover, .box h3:hover{
+    box-shadow: 0px 0px 8px inset var(--bright), 0px 0px 8px inset var(--bright);
+    cursor: pointer;
+}
+
+footer {
+    color: var(--bright);
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    margin-top: auto;
+    height: 15vh;
+}
+
+@media screen and (max-width: 992px) {
+    .concepts {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .concepts {
+        width: 100%;
+    }
+}
